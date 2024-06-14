@@ -1,0 +1,35 @@
+/* กำหนดแบบอักษรสำหรับทั้งหน้าเว็บ */
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+  
+  /* หรือกำหนดแบบอักษรสำหรับส่วนต่างๆ เฉพาะ */
+  .topnav a {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+  
+  footer p {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+  /* กำหนดภาพพื้นหลังสำหรับทั้งหน้าเว็บ */
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bg-img {
+    /* ใส่ภาพพื้นหลังที่นี่ */
+    background-image: url('w2.jpg');
+    height: 100%;
+    /* จัดให้ภาพอยู่ตรงกลางและขยายอย่างสวยงาม */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  h1 {
+    color: green;
+  }
+  h2 {
+    color: red;
+  }

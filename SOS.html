@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        /* กำหนดสไตล์สำหรับเอฟเฟกต์เครื่องพิมพ์ดีด */
+        .typewriter h1 {
+          overflow: hidden;
+          border-right: .15em solid orange;
+          white-space: nowrap;
+          margin: 0 auto;
+          letter-spacing: .15em;
+          animation: typing 1.5s steps(10, end), blink-caret .75s step-end infinite;
+        }
+        
+        /* กำหนดแอนิเมชั่นสำหรับเอฟเฟกต์การพิมพ์ */
+        @keyframes typing {
+          from { width: 0 }
+          to { width: 100% }
+        }
+        
+        /* กำหนดแอนิเมชั่นสำหรับตัวชี้เครื่องพิมพ์ดีด */
+        @keyframes blink-caret {
+          from, to { border-color: transparent }
+          50% { border-color: orange; }
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="typewriter">
+          <h1 id="text"></h1>
+        </div>
+        
+        <script>
+        // ข้อความที่ต้องการให้แสดงเอฟเฟกต์
+        var dataText = ["SOS. . . . . . . . . . . . ", "wait. . . . .  ", "The SPD is coming.. .. .. ."];
+        
+        var index = 0;
+        function typeWriter() {
+          if (index < dataText.length) {
+            var text = dataText[index];
+            var i = 0;
+            var timer = setInterval(function() {
+              if (i < text.length) {
+                document.getElementById("text").innerHTML += text.charAt(i);
+                i++;
+              } else {
+                clearInterval(timer);
+                index++;
+                // หน่วงเวลา 45 วินาทีก่อนเริ่มข้อความถัดไป
+                setTimeout(typeWriter, 5000);
+              }
+            }, 120);
+          } else {
+            // เมื่อวนลูปข้อความเสร็จสิ้น, เปลี่ยนไปยังลิงค์ใหม่
+            window.location.href = 'https://lifnat.github.io/correct1/'; // แทนที่ด้วย URL ที่คุณต้องการ
+          }
+        }
+        
+        // เริ่มการแสดงเอฟเฟกต์
+        typeWriter();
+        </script>
+        <style>
+            /* กำหนดสไตล์สำหรับหน้าโหลด */
+            .loader {
+              border: 16px solid #f3f3f3; /* Light grey */
+              border-top: 16px solid #00ff22; /* Blue */
+              border-radius: 50%;
+              width: 120px;
+              height: 120px;
+              animation: spin 1s linear infinite;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+            
+            /* กำหนดแอนิเมชั่นสำหรับวงกลมหมุน */
+            @keyframes spin {
+              0% { transform: translate(-50%, -50%) rotate(0deg); }
+              100% { transform: translate(-50%, -50%) rotate(360deg); }
+            }
+            </style>
+            </head>
+            <body>
+            
+            <!-- สร้างหน้าโหลด -->
+            <div class="loader" id="loader"></div>
+            
+            <script>
+            // ฟังก์ชันสำหรับเปลี่ยนไปยังลิงค์ใหม่หลังจากหน้าโหลด
+            function loadComplete() {
+              // ซ่อนหน้าโหลด
+              document.getElementById('loader').style.display = 'none';
+              // เปลี่ยนไปยังลิงค์ใหม่
+              window.location.href = 'correct.html'; // แทนที่ด้วย URL ที่คุณต้องการ
+            }
+            
+            // ตั้งเวลาหน่วง 15 วินาทีสำหรับหน้าโหลด
+            setTimeout(loadComplete, 25000);
+            </script>
+      <style>
+        /* กำหนดสไตล์สำหรับวิดีโอ */
+        #myVideo {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%;
+          min-height: 100%;
+        }
+      
+        /* กำหนดสไตล์สำหรับเนื้อหาที่จะแสดงเหนือวิดีโอ */
+        .content {
+          position: fixed;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          color: #f1f1f1;
+          width: 100%;
+          padding: 20px;
+        }
+      </style>
+      </head>
+      <body>
+      
+      <video autoplay muted loop id="myVideo">
+        <source src="path_to_your_video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      
+      <div class="content">
+        <h2>Waiting to DONE</h2>
+        <p>Don't panic...</p>
+      </div>
+</body>
+</html>
